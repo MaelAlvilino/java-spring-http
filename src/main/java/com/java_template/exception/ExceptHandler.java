@@ -18,7 +18,7 @@ public class ExceptHandler {
 
     @ExceptionHandler(InvalidFormatException.class)
     public ResponseEntity<String> handleInvalidFormatException(@org.jetbrains.annotations.NotNull InvalidFormatException ex) {
-        String errorMessage = "O campo '" + ex.getPath().get(0).getFieldName() + "' deve ser um número inteiro válido.";
+        String errorMessage = "O campo '" + ex.getPath().get(0).getFieldName() + "' precisa ser um número inteiro válido.";
         return ResponseEntity.badRequest().body(errorMessage);
     }
 }
